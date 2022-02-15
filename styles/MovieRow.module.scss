@@ -1,0 +1,21 @@
+.card {
+    h2 {
+        color: #fff;
+    }
+    .slideMovies {
+        display: flex;
+        overflow: hidden;
+        width: 99999px;
+        .slideItem {
+            width: 250px;
+            transform: scale(.9);
+            transition: all 0.4s ease;
+            &:hover {
+                transform: scale(1);
+            }
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+}
