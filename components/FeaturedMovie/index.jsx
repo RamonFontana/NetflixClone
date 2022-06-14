@@ -35,7 +35,7 @@ export default function FeaturedMovie({ item }) {
             </svg>
             Assistir
           </a>
-          <a href={item.homepage} target="_blank" className={style.moreInfo}>
+          <a href={item.homepage} target="_blank" rel="noopener noreferrer" className={style.moreInfo}>
             <svg
               width="24"
               height="24"
