@@ -1,7 +1,7 @@
 import React from 'react';
 import style from '../../styles/Header.module.scss'
 
-export default ({black}) => {
+export default function Header({black}) {
     return (
         <header className={`${style.header} ${black && style.black}`}>
             <div className={style.headerLogo}>
