@@ -1,13 +1,14 @@
 .card {
     position: relative;
     z-index: 3;
+    padding-left: 30px;
+    overflow: hidden;
     h2 {
         color: #fff;
     }
     .slideMovies {
         display: flex;
-        overflow: hidden;
-        width: 99999px;
+        transition: all .4s ease;
         .slideItem {
             width: 250px;
             transform: scale(.9);
@@ -18,6 +19,42 @@
             img {
                 max-width: 100%;
             }
+        }
+    }
+    &:hover .movieRowLeft,
+    &:hover .movieRowRight {
+        opacity: 1;
+    }
+    .movieRowLeft,
+    .movieRowRight {
+        position: absolute;
+        width: 40px;
+        height: 379px;
+        background-color: rgba($color: #000, $alpha: .6);
+        z-index: 99;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        color: #fff;
+        cursor: pointer;
+        opacity: 0;
+        transition: all .3s ease;
+    }
+    .movieRowLeft {
+        left: 0;
+    }
+    .movieRowRight {
+        right: 0;
+    }
+    @media (max-width: 768px) {
+        .slideMovies .slideItem{
+            width: 150px;
+        }
+        .movieRowLeft,
+        .movieRowRight {
+            opacity: 1;
+            height: 225px;
         }
     }
 }
