@@ -26,7 +26,6 @@ export default function Home() {
     };
 
     loadAll();
-    console.log(featured);
   }, []);
 
   useEffect(()=>{
